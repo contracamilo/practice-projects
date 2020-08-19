@@ -1,6 +1,18 @@
 const cargarPosts = document.querySelector('#cargar').addEventListener('click', cargarAPI);
 
+var btn = document.createElement("Button");
+btn.addEventListener('click', increment);
 
+btn.innerHTML = "0";
+btn.id = "btn";
+btn.className = "btnClass";
+
+document.body.appendChild(btn);
+
+function increment(e){
+    console.log(e.target.innerText++);
+    btn.innerHTML = e.target.innerText++;
+}
 
 function cargarAPI() {
      // crear el objeto
